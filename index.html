@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>juntaのページ</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+
+</head>
+<body id="color">
+	<div class="header">
+		<h1 class="top">juntaのページ</h1>
+	</div>
+	
+	<div class="tab">
+		<div class="tab1"><a href="index.html">Home</a></div>
+		<div class="tab2"><a href="profile.html">Profile</a></div>
+		<div class="tab3"><a href="diary.html">Diary</a></div>
+		<div class="tab4"><a href="link.html">LINK</a></div>
+		<div class="tab5"><a href="diary2.html">dirary2</a></div>
+	</div>
+	<div class="date">
+	<script>
+	var today = new Date();
+ 
+	var year = today.getFullYear();
+	var month = today.getMonth() + 1;
+	var day = today.getDate();
+	var hours = today.getHours();
+ 
+	document.write('今日は'+ year + '年' + month + '月' + day + '日' +"です。");
+	if(13 <= hours && hours <= 15){
+		document.write("今は、プログラミングの授業中です。");
+	}else if(9 <= hours &&  hours<= 11){
+		document.write("今は、英語の授業中です。");
+	}else{
+		document.write("今は、自由時間です。");
+	}
+		
+	
+
+	</script>
+	</div>
+
+	<marquee scrollamount=30 direction="right" style="margin:20px 10px 30px 40px; font-size:30px">juntaのページへようこそ！</marquee>
+	<h2 class="kousin"> 更新情報</h2>
+	
+
+	<dl>
+		<dt>2019/8/5</dt>
+		<dd>HP作成・日記更新</dd>
+	</dl>
+
+		<dl>
+		<dt>2019/8/7</dt>
+		<dd>日記更新</dd>
+	</dl>
+	<br><br>
+	<p style="margin-bottom:10px;width:50%">ボタンを押すと背景色が変わります。</p>
+	<input  style="margin:0px 0px 0px 30px" type="button" value=" ボタン " onclick="changeColor('color');" />
+	
+
+
+
+	<div class="footer">
+		<p>Copyright(c) Junta</p>
+	</div>
+	<script>
+	function changeColor(idname){
+  var obj = document.getElementById(idname);
+  obj.style.color = '#ffffff';            //文字色を白にする
+  obj.style.backgroundColor = '#ff0000';  //背景色を赤にする
+}
+</script>
+
+	
+</body>
+</html>
+
